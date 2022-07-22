@@ -10,8 +10,7 @@
     <script>
         let choices = ["Rock", "Paper", "Scissors"];
         function gapIt() {console.log("-------------------------------------");}
-        // function getComputerChoice() {return choices[Math.floor(Math.random() * 2.99)];}
-        function getComputerChoice() {return choices[0];}
+        function getComputerChoice() {return choices[Math.floor(Math.random() * 2.99)];}
         function getVerdict(playerSelection, computerSelection) {
             let result;
             if (playerSelection === computerSelection) {
