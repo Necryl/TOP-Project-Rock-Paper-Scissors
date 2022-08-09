@@ -127,6 +127,7 @@ function play() {
 
 //on start
 body.classList.add("centered");
+beforeGameInput.value = 5;
 
 
 // console.log(`Welcome to Rock Paper Scissors!`);
