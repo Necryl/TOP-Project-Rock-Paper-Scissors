@@ -1,4 +1,24 @@
+// get elements
+const body = document.querySelector("body");
+const beforeGameInput = document.querySelector(".beforeGame input");
+
 let choices = ["Rock", "Paper", "Scissors"];
+
+
+// attaching events
+beforeGameInput.addEventListener("input", setInputWidth);
+beforeGameInput.addEventListener("change", event => {
+    if (beforeGameInput.value < 1) {
+        beforeGameInput.value = 1;
+        setInputWidth();
+    }
+});
+
+
+// defining functions
+function setInputWidth () {
+    beforeGameInput.style.width = `${beforeGameInput.value.length + 2}ch`;
+}
 
 function gapIt() {console.log("-------------------------------------");}
 
@@ -100,6 +120,14 @@ function game() {
     console.log(`Losses --------- ${scores[1]}`);
     console.log(`Draws ---------- ${scores[2]}`);
 }
+
+function play() {
+    body.classList.remove("centered");
+}
+
+//on start
+body.classList.add("centered");
+
 
 // console.log(`Welcome to Rock Paper Scissors!`);
 // alert("Welcome to Rock Paper Scissors!");

@@ -1,0 +1,46 @@
+body {
+    margin: 0%;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+    /* background-color: aqua; */
+}
+
+.header {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+.header * {
+    margin: 0%;
+}
+
+.beforeGame {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.beforeGame input {
+    border: 0.15em solid rgb(255, 110, 74);
+    border-radius: 0.5em;
+    width: 3ch;
+    text-align: center;
+    padding: 0.5em;
+    font-size: large;
+    font-weight: 600;
+    color: rgb(90, 78, 74);
+    /* background-color: rgb(255, 248, 246); */
+}
+
+.centered {
+    position: fixed;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
