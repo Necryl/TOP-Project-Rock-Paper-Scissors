@@ -1,46 +1,310 @@
-body {
-    margin: 0%;
-    padding: 1em;
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+* {
+    font-family: 'Acme', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    /* letter-spacing: 0.02em; */
+    word-spacing: 0.1em;
+}
+*:hover {
+    transition: all 0.1s;
+}
+
+html {
+    /* background-color: aliceblue; */
+    height: 100%;
+}
+
+body {
+    /* background-color: aqua; */
+    margin: 0%;
+    height: 85%;
+    
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
-    
-    /* background-color: aqua; */
+}
+
+h1, h2 {
+    margin: 0%;
 }
 
 .header {
     /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-}
-.header * {
-    margin: 0%;
 }
 
 .beforeGame {
     /* background-color: aqua; */
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 0.5em;
 }
 
 .beforeGame input {
-    border: 0.15em solid rgb(255, 110, 74);
-    border-radius: 0.5em;
-    width: 3ch;
-    text-align: center;
+    /* background-color: rgb(255, 248, 246); */
     padding: 0.5em;
+    width: 3ch;
+    
+    text-align: center;
     font-size: large;
     font-weight: 600;
-    color: rgb(90, 78, 74);
-    /* background-color: rgb(255, 248, 246); */
+    color: rgb(82, 100, 31);
+    
+    border: 0.15em solid rgb(21, 52, 100);
+    border-radius: 0.5em;
+}
+.beforeGame button {
+    padding: 0.1em 2em;
+    background-color: rgb(206, 240, 203);
+    border: 0.2em solid rgb(71, 94, 30);
+    border-radius: 0.5em;
+    color: rgb(46, 66, 13);
+    font-weight: 600;
+}
+.beforeGame button:hover {
+    background-color: rgb(88, 141, 2);
+    border-color: rgb(181, 228, 13);
+    color: white;
 }
 
-.centered {
-    position: fixed;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.currentRound {
+    /* background-color: aqua; */
+    width: 55%;
+    height: auto;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 0.175em solid rgb(185, 50, 50);
+    border-radius: 0.5em;
+
+    padding: 1em 5em;
+    padding-bottom: 2em;
+
+    transition: all 0.1s;
 }
+
+.currentRound:hover {
+    width: 57%;
+    padding-bottom: 3em;
+}
+
+.verdict {
+    display: none;
+}
+
+.roundNum {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+.arena {
+    /* background-color: antiquewhite; */
+    width: 100%;
+
+    display: flex;
+    gap: 0.5em;
+}
+
+.createGap {
+    /* background-color: antiquewhite; */
+    margin-left: auto;
+}
+
+.inGame {
+    /* background-color: aqua; */
+    position: fixed;
+    bottom: 10%;
+
+    gap: 1em;
+}
+.inGame * {
+    margin: 0%;
+    padding: 0%;
+
+    width: 5.5em;
+    height:4.5em;
+
+    border-radius: 0.4em;
+
+    font-size: 1.2em;    
+}
+.rock {
+    border-color: rgb(175, 195, 219);
+}
+.paper {
+    border-color: antiquewhite;
+}
+.scissors {
+    border-color: rgb(255, 201, 150);
+}
+
+ul {
+    margin: 0%;
+    padding: 0%;
+    
+    list-style-type: none;
+}
+
+li {
+    margin: 0%;
+    padding: 0%;
+
+    flex-shrink: 0;
+}
+
+.scoreElement {
+    /* background-color: aqua; */
+    display: none;
+    width: 100%;
+
+    flex-direction: column;
+    gap: 0.25em;
+
+    font-size: 1.3em;
+}
+
+.scoreRow {
+    /* background-color: antiquewhite; */
+    flex: auto;
+    
+    display: flex;
+    gap: 0.75em;
+
+    width: 100%;
+}
+
+.scoreHeader {
+    margin-bottom: 0.25em;
+
+    font-weight: 600;
+}
+
+.scoreData {
+    /* background-color: aquamarine; */
+}
+
+hr {
+    /* background-color: blue; */
+    flex-shrink: 1;
+
+    border: none;
+    border-top: 0.1em dashed rgba(0, 0, 0, 0.212);
+    min-width: none;
+    width: 100%;
+}
+
+.endGame {
+    position: fixed;
+    bottom: 10%;
+
+    gap: 1em;
+}
+
+.mainMenu {
+    /* background-color: aqua; */
+    padding: 1em 2em;
+    border-radius: 0.5em;    
+    font-size: 1.5em;
+}
+.mainMenu:hover {
+    padding: 1.1em 2.1em;
+    background-color: rgb(31, 98, 161);
+    color: aliceblue;
+}
+.mainMenu:focus {
+    border-color: rgb(31, 98, 161);
+    background-color: aliceblue;
+    color: black;
+}
+
+.history {
+    /* background-color: aqua; */
+    width: 100%;
+    height: 45%;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75em;
+
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.historyItem {
+    /* background-color: aquamarine; */  
+    padding: 1em 5em;
+    
+    width: 50%;
+    height: auto;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 0.175em solid rgb(103, 138, 63);
+    border-radius: 0.5em;
+
+    transition: all 0.1s;
+
+}
+
+.historyItem:hover {
+    background-color: rgb(103, 138, 63);
+    color: rgb(255, 255, 255);
+    width: 52%;
+}
+
+.historyItem * {
+    font-size: 1.2em;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 0.2em 0.5em;
+    border-radius: 6px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }

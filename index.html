@@ -13,21 +13,63 @@
         <h1>Rock, Paper, Scissors!</h1>
     </div>
     <div class="currentRound" style="display: none">
+        <h1 class="verdict"></h1>
         <h2 class="roundNum">Round 1</h2>
-        <h2 class="computer">Computer</h2><h2 class="suspense"></h2>
-        <h2 class="suspense"></h2><h2 class="player">Player</h2>
+        <div class="arena">
+            <h2 class="computer">Computer &gt</h2><h2 class="suspense"></h2>
+            <h2 class="suspense createGap"></h2><h2 class="player">&lt Player</h2>
+        </div>
+        <ul class="scoreElement">
+            <li class="scoreHeader">
+                Your scores:
+            </li>
+            <li>
+                <ul class="scoreRow">
+                    <li>Rounds played</li>
+                    <hr>
+                    <li class="scoreData"></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="scoreRow">
+                    <li>Wins</li>
+                    <hr>
+                    <li class="scoreData"></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="scoreRow">
+                    <li>Loses</li>
+                    <hr>
+                    <li class="scoreData"></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="scoreRow">
+                    <li>Draws</li>
+                    <hr>
+                    <li class="scoreData"></li>
+                </ul>
+            </li>
+        </ul>
     </div>
     <div class="history" style="display: none"></div>
-    <div class="user-controls">
-        <div class="inGame" style="display: none">
-            <button>Rock</button>
-            <button>Paper</button>
-            <button>Scissors</button>
-        </div>
-        <div class="beforeGame">
+    <div class="beforeGame">
+        <div class="tooltip">
+            <span class="tooltiptext">Number of rounds</span>
             <input min="1" type="number">
-            <button onclick="play()">Play</button>
-        </div>
+        </div>          
+        <button onclick="startGame()">Play</button>
+    </div>
+    <div class="inGame" style="display: none">
+        <button class="rock">Rock</button>
+        <button class="paper">Paper</button>
+        <button class="scissors">Scissors</button>
+    </div>
+    <div class="endGame" style="display: none">
+        <button class="mainMenu">
+            Main Menu
+        </button>
     </div>
 </body>
 </html>
