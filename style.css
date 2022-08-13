@@ -308,3 +308,13 @@ hr {
     visibility: visible;
     opacity: 1;
   }
+  footer {
+    position: fixed;
+    bottom: 1%;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+  }
+  footer div {
+    margin-right: 1em;
+  }
