@@ -31,10 +31,6 @@ h1, h2 {
     margin: 0%;
 }
 
-.header {
-    /* background-color: aqua; */
-}
-
 .beforeGame {
     /* background-color: aqua; */
     display: flex;
@@ -181,10 +177,6 @@ li {
     margin-bottom: 0.25em;
 
     font-weight: 600;
-}
-
-.scoreData {
-    /* background-color: aquamarine; */
 }
 
 hr {
